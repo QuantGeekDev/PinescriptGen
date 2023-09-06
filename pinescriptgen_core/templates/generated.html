@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pine Script Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <div class="title-icon"></div>
+            <h1 class="titulo">You pine code strategy</h1>
+        </div>
+        <div class="code-box">
+            <pre id="pine_code">{{ pine_code }}</pre>
+        </div>
+        <button onclick="copyToClipboard('pine_code')">Copy to Clipboard</button>
+    </div>
+
+    <!-- Renderizar el código Pine Script como un script -->
+    <script type="text/pine">
+        {{ entry_code }}
+    </script>
+
+</body>
+</html>
+
+
+
+

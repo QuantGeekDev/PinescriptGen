@@ -1,0 +1,235 @@
+body {
+    margin: 20px;
+    padding: 0;
+    background: linear-gradient(to bottom, #0F0F0F 0%, #223246 40%);
+}
+
+/* Container for the title */
+.title-container {
+    width: 1600px;
+    height: 100px;
+    margin: 20px auto;
+    background-color: #1D2A3B;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #4d4e4e;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.title-icon {
+    width: 80px;
+    height: 80px;
+    background-image: url('https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_f049e06c64ec91c43c95c9a9376c455a/screenspace.gif');
+    background-size: cover;
+    background-position: left center;
+    margin-right: 20px;
+}
+
+.caja {
+    width: 700px;
+    height: 300px;
+    background: linear-gradient(to bottom, #13B079 0%, #223246 60%);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 1px solid #13B079;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.franja-superior {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #223246;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 25px;
+    padding-top: 5px;
+}
+
+.titulo {
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.texto-caja {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    width: 300px;
+    height: 70px;
+    background-color: black;
+    color: #FFFFFF;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+/* Estilo para el icono del círculo verde con borde blanco */
+.circulo-verde {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background-color: #13B079;
+    margin-right: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Estilo para el icono del círculo rojo con borde blanco */
+.circulo-rojo {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background-color: #FF0000;
+    margin-right: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Estilo para el icono del círculo naranja con borde blanco */
+.circulo-naranja {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background-color: #f0e00b;
+    margin-right: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+.input-group label {
+    margin-right: 10px;
+}
+
+.input-group select,
+.input-group input {
+    background-color: #0F0F0F;
+    border: 1px solid #034169;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 8px;
+    width: 160px;
+}
+
+.input-group input[type="text"]::placeholder {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* Contenedor 1 LONG */
+.grid-container {
+    width: 1600px;
+    height: 750px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+    background-color: #1D2A3B;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #4d4e4e;
+}
+
+/* contenedor 2 SHORT 2, 2.11 y 2.12 */
+.grid-container-2 {
+    width: 1600px;
+    height: 750px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+    background-color: #1D2A3B;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #4d4e4e;
+}
+
+/* contenedor 3, ST y TP 3, 4 y 5 */
+.grid-container-3 {
+    width: 1600px;
+    height: 750px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+    background-color: #1D2A3B;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #4d4e4e;
+    position: relative;
+}
+
+/* Estilo para el botón */
+.boton-atractivo {
+    display: inline-block;
+    background-color: #13B079;
+    color: #FFFFFF;
+    border: 2px solid #1D2A3B;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 30px 40px;
+    cursor: pointer;
+    width: max-content;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}
+
+.boton-atractivo:hover {
+    background-color: #0D8548;
+}
+
+.caja {
+    margin-right: 0;
+}
+/* Media Query for mobile devices */
+@media (max-width: 480px) {
+    .container {
+        width: calc(100% - 40px);
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    .texto-caja {
+        width: 100%;
+        left: 0;
+    }
+}

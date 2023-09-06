@@ -1,0 +1,237 @@
+
+    <!-- Contenedor de cuadrícula para los bloques 2, 2.11 y 2.12 -->
+    <div class="grid-container-2">
+        <!-- Bloque 2: Condiciones SHORT - EMA, SMA, PRICE -->
+        <div class="caja">
+            <div class="franja-superior">
+                <span class="circulo-rojo"></span>
+                <h1 class="titulo">SHORT - EMA, SMA, PRICE</h1>
+            </div>
+            {% for i in range(4) %}
+            <div class="input-group">
+                <select name="indicator1_short_{{i}}">
+                    <option value="">--indicador--</option>
+                    <option value="ema">EMA</option>
+                    <option value="sma">SMA</option>
+                    <option value="price">PRICE</option>
+                </select>
+                <input type="text" name="value1_short_{{i}}" placeholder="Valor" style="width: 100px;">
+                <select name="condition_short_{{i}}">
+                    <option value="">--condición--</option>
+                    <option value=">">Mayor que</option>
+                    <option value="<">Menor que</option>
+                    <option value="crossUp">Cruce al alza</option>
+                    <option value="crossDown">Cruce a la baja</option>
+                </select>
+                <select name="indicator2_short_{{i}}">
+                    <option value="">--indicador--</option>
+                    <option value="ema">EMA</option>
+                    <option value="sma">SMA</option>
+                    <option value="price">PRICE</option>
+                </select>
+                <input type="text" name="value2_short_{{i}}" placeholder="Valor" style="width: 100px;">
+            </div>
+            {% endfor %}
+        </div>
+        <div class="caja">
+            <!-- Bloque 2.10: Condiciones SHORT - PRICE -->
+            <!-- (Mismas condiciones que Bloque 1.10 pero para SHORT) -->
+            <div class="franja-superior">
+                <span class="circulo-rojo"></span>
+                <h1 class="titulo">SHORT - PRICE</h1>
+            </div>
+            {% for i in range(1) %}
+            <div class="input-group">
+                <select name="indicator1_short_10">
+                    <option value="price">PRICE</option>
+                </select>
+                <select name="condition_short_10">
+                    <option value="">--condición--</option>
+                    <option value="crossUp">Cruce al alza</option>
+                    <option value="crossDown">Cruce a la baja</option>
+                    <option value=">">Mayor que</option>
+                    <option value="<">Menor que</option>
+                </select>
+                <select name="indicator2_short_10">
+                    <option value="">--indicador--</option>
+                    <option value="sma">SMA</option>
+                    <option value="ema">EMA</option>
+                </select>
+                <input type="text" name="value1_short_10" placeholder="Valor" style="width: 100px;">
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="caja">
+            <!-- Bloque 2.11: Condiciones SHORT - ADX y CCI -->
+
+            <div class="franja-superior">
+                <span class="circulo-rojo"></span>
+                <h1 class="titulo">SHORT - ADX y CCI</h1>
+            </div>
+            {% for i in range(2) %}
+            <div class="input-group">
+                <select name="indicator1_short_11_0">
+                    <option value="">--indicador--</option>
+                    <option value="adx">ADX</option>
+                    <option value="cci">CCI</option>
+                </select>
+                <select name="condition_short_11_0">
+                    <option value="">--condición--</option>
+                    <option value=">">Mayor que</option>
+                    <option value="<">Menor que</option>
+                </select>
+                <input type="text" name="value1_short_11_0" placeholder="Valor" style="width: 100px;">
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="caja">
+                    <!-- Bloque 2.12: Condiciones SHORT - DMI+, DMI-, RSI, MACD -->
+                    <div class="franja-superior">
+                        <span class="circulo-rojo"></span>
+                        <h1 class="titulo">SHORT - DMI+, DMI-, RSI, MACD</h1>
+                    </div>
+
+                    <!-- Primera línea: DMI+ / Mayor que / DMI- -->
+                    <div class="input-group">
+                        <select name="indicator2_short_12_0">
+                            <option value="">--indicador--</option>
+                            <option value="dmi+">DMI+</option>
+                            <option value="dmi-">DMI-</option>
+                        </select>
+                        <select name="condition2_short_12_0">
+                            <option value="">--condición--</option>
+                            <option value=">">Mayor que</option>
+                            <option value="<">Menor que</option>
+                        </select>
+                        <select name="condition2_short_12_0">
+                            <option value="">--indicador--</option>
+                            <option value="dmi+">DMI+</option>
+                            <option value="dmi-">DMI-</option>
+                        </select>
+                    </div>
+
+                    <!-- Segunda línea: RSI / Mayor que / Nivel / Valor -->
+                    <div class="input-group">
+                        <select name="indicator2_short_12_1">
+                            <option value="">--indicador--</option>
+                            <option value="rsi">RSI</option>
+                            <option value="macd">MACD</option>
+                        </select>
+                        <select name="condition2_short_12_1">
+                            <option value="">--condición--</option>
+                            <option value=">">Mayor que</option>
+                            <option value="<">Menor que</option>
+                            <option value="crossUp">Cruce al alza</option>
+                            <option value="crossDown">Cruce a la baja</option>
+                        </select>
+                        <select name="indicator3_short_12_1">
+                            <option value="">--indicador--</option>
+                            <option value="nivel">NIVEL</option>
+                            <option value="lineaDeSeñal">LINEA DE SEÑAL</option>
+                        </select>
+                        <input type="text" name="value3_short_12_1" placeholder="Valor" style="width: 100px;">
+                    </div>
+
+                    <!-- Tercera línea: MACD / Cruce al alza / Valor / Vacío -->
+                    <div class="input-group">
+                        <select name="indicator2_short_12_2">
+                            <option value="">--indicador--</option>
+                            <option value="rsi">RSI</option>
+                            <option value="macd">MACD</option>
+                        </select>
+                        <select name="condition2_short_12_2">
+                            <option value="">--condición--</option>
+                            <option value=">">Mayor que</option>
+                            <option value="<">Menor que</option>
+                            <option value="crossUp">Cruce al alza</option>
+                            <option value="crossDown">Cruce a la baja</option>
+                        </select>
+                        <select name="indicator3_short_12_2">
+                            <option value="">--indicador--</option>
+                            <option value="nivel">NIVEL</option>
+                            <option value="lineaDeSeñal">LINEA DE SEÑAL</option>
+                        </select>
+                        <input type="text" name="value3_short_12_2" placeholder="Valor" style="width: 100px;">
+                    </div>
+                </div>
+            </div
+
+
+    <!-- Contenedor de cuadrícula para los bloques 3, 4 y 5 -->
+    <div class="grid-container-3">
+        <div class="caja">
+            <!-- Bloque 3: Take Profit -->
+            <div class="franja-superior">
+                <span class="circulo-naranja"></span>
+                <h1 class="titulo">Take Profit</h1>
+            </div>
+            <div class="input-group">
+                <label>
+                    <input type="checkbox" name="tp1_enabled" value="true" checked>
+                    TP1:
+                </label>
+                <input type="text" name="tp1_percent" value="1" placeholder="%" style="width: 50px;">
+                <label>%     Lotaje:</label>
+                <input type="text" name="tp1_lot" value="25" placeholder="Lotaje" style="width: 50px;">
+            </div>
+            <div class="input-group">
+                <label>
+                    <input type="checkbox" name="tp2_enabled" value="true" checked>
+                    TP2:
+                </label>
+                <input type="text" name="tp2_percent" value="2" placeholder="%" style="width: 50px;">
+                <label>%     Lotaje:</label>
+                <input type="text" name="tp2_lot" value="25" placeholder="Lotaje" style="width: 50px;">
+            </div>
+            <div class="input-group">
+                <label>
+                    <input type="checkbox" name="tp3_enabled" value="true" checked>
+                    TP3:
+                </label>
+                <input type="text" name="tp3_percent" value="3" placeholder="%" style="width: 50px;">
+                <label>%     Lotaje:</label>
+                <input type="text" name="tp3_lot" value="100" placeholder="Lotaje" style="width: 50px;">
+            </div>
+        </div>
+
+        <div class="caja">
+            <!-- Bloque 4: Stop Loss -->
+            <div class="franja-superior">
+                <span class="circulo-naranja"></span>
+                <h1 class="titulo">Stop Loss</h1>
+            </div>
+            <div class="input-group">
+                <input type="text" name="stop_loss_percent" value="3" placeholder="%" style="width: 50px;">
+                <label>%     Lotaje:</label>
+                <input type="text" name="stop_loss_lot" value="100" placeholder="Lotaje" style="width: 50px;">
+            </div>
+        </div>
+
+        <div class="caja">
+            <!-- Bloque 5: Gestión de la Operación -->
+            <div class="franja-superior">
+                <span class="circulo-naranja"></span>
+                <h1 class="titulo">Gestión de la Operación</h1>
+            </div>
+            <div class="input-group">
+                <label>
+                    <input type="checkbox" name="trailing_enabled" value="true" checked>
+                    Trailing Stop:
+                </label>
+                <input type="text" name="trailing_pips" value="10" placeholder="pips" style="width: 50px;">
+            </div>
+            <div class="input-group">
+                <label>
+                    <input type="checkbox" name="breakEven_enabled" value="true" checked>
+                    Break Even:
+                </label>
+                <input type="text" name="breakEven_pips" value="10" placeholder="pips" style="width: 50px;">
+                <label>%</label>
+                <input type="text" name="breakEven_percent" value="50" placeholder="%" style="width: 50px;">
+            </div>
+        </div>
+
+    </div>
+
